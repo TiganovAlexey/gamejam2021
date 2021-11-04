@@ -3,7 +3,9 @@ logs
 *.log
 
 # Ignore Library
-/Library
+*/Library
 
 # Ignore Temp
-/Temp
+*/Temp
+
+# Ignore .idea
