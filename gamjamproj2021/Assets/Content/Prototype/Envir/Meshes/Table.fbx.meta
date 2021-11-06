@@ -13,6 +13,7 @@ ModelImporter:
     100014: transform2
     100016: transform3
     100018: transform4
+    100020: polySurface5
     400000: pCube1
     400002: pCube14
     400004: pCube2
@@ -23,13 +24,17 @@ ModelImporter:
     400014: transform2
     400016: transform3
     400018: transform4
+    400020: polySurface5
     2100000: lambert1
     2300000: pCube14
     2300002: //RootNode
+    2300004: polySurface5
     3300000: pCube14
     3300002: //RootNode
+    3300004: polySurface5
     4300000: pCube14
     4300002: pCube15
+    4300004: polySurface5
   externalObjects: {}
   materials:
     importMaterials: 0
