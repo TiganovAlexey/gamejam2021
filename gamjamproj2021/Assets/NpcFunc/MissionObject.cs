@@ -14,7 +14,9 @@ public class MissionObject : MonoBehaviour
 
     void OnMouseUp()
     {
-        if (Input.GetMouseButtonUp(0)) // если при нажатии на правую кнопку мыши;
+        GameObject MissionTagScanner = GameObject.FindGameObjectWithTag("Player");
+
+        if (Input.GetMouseButtonUp(0) & (transform.position - MissionTagScanner.transform.position).sqrMagnitude < 8 * 8) // если при нажатии на правую кнопку мыши + нужно зайти в радиус взаимодействия;
         {
             if (MP.ObjectTag == gameObject.tag) // и при том что тэг объекта равен тому значению которое написано в ObjectTag;
             {
