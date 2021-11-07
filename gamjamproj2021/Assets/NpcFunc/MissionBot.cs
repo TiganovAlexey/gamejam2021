@@ -24,7 +24,7 @@ public class MissionBot : MonoBehaviour
         GameObject MissionTagScanner = GameObject.FindGameObjectWithTag("Player"); // персонаж у которого берем квест будет взаимодействовать только с тем объектом у которого тэг Player;
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if ((transform.position - MissionTagScanner.transform.position).sqrMagnitude < 5 * 5)
+            if ((transform.position - MissionTagScanner.transform.position).sqrMagnitude < 8 * 8)
             {
                 vis = true; // переменная vis принимает значение true;
             }
@@ -60,7 +60,7 @@ public class MissionBot : MonoBehaviour
                         MP.MissionText = ""; // убирается название квеста;
                         MP.ObjectTag = ""; // обнуляется тэг объекта;
                         MP.MissionObjects = false; // объект считается не подобранным;
-                        MP.Money = MP.Money + 100; //добавление денег за выполнение квеста;
+                        MP.Point = MP.Point + 1; //добавление денег за выполнение квеста;
                         vis = false; // диалоговое окно закрывается;
                     }
                 }
@@ -68,8 +68,10 @@ public class MissionBot : MonoBehaviour
                 { // если вы еще не подобрали объект;
                     if (GUI.Button(new Rect((Screen.width - 100) / 2, (Screen.height - 300) / 2 + 250, 100, 40), "Нет")) // то вместо кнопки да, будет кнопка нет;
                     {
+                        MP.Point = MP.Point - 1;
                         vis = false; // при нажатии на которую, окно просто закроется;
                     }
+                  
                 }
             }
         }
